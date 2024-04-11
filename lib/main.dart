@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:jogo_sobre_poo/routes/rotas.dart';
 import 'package:jogo_sobre_poo/views/home.dart';
 import 'package:jogo_sobre_poo/views/tela_de_poo.dart';
+import 'package:jogo_sobre_poo/views/tela_do_codigo.dart';
 import 'package:jogo_sobre_poo/views/tela_do_jogo.dart';
 
 void main() {
