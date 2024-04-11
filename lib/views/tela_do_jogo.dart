@@ -164,11 +164,12 @@ class _TelaDoJogoState extends State<TelaDoJogo> {
       ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _indiceAtual,
-        onTap: (int valor){ 
+        onTap: (int valor) {
           _indiceAtual = valor;
         },
         items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.games_rounded), label: 'Jogo'),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.games_rounded), label: 'Jogo'),
           BottomNavigationBarItem(icon: Icon(Icons.code), label: 'Código'),
         ],
       ),
