@@ -87,12 +87,36 @@ class _TelaDoJogoState extends State<TelaDoJogo> {
             child: ListView.builder(
                 shrinkWrap: true,
                 scrollDirection: Axis.horizontal,
-                itemCount: 3,
+                itemCount: listaDeMetodos.length,
                 itemBuilder: (context, index) {
                   return Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Container(
-                      color: Colors.amber,
+                      child: Padding(
+                        padding: const EdgeInsets.all(12.0),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Textos(texto: '${listaDeMetodos[index]}'),
+                            ElevatedButton(
+                              onPressed: () {
+                                debugPrint('${listaDeAtributos[index]}');
+                              },
+                              child: Padding(
+                                padding: const EdgeInsets.only(top: 8.0),
+                                child: const Text(
+                                  'Usar',
+                                  style: TextStyle(fontWeight: FontWeight.bold),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20.0),
+                        color: Color(0xFFD4F1F4),
+                      ),
                       width: 200,
                     ),
                   );
