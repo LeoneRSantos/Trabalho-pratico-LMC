@@ -18,8 +18,13 @@ class MyApp extends StatelessWidget {
       title: 'Jogo sobre POO',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
+        appBarTheme: AppBarTheme(
+          foregroundColor: Colors.grey.shade100,
+        ),
         fontFamily: 'Aileron',
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.teal.shade900),
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: const Color(0xFF05445E),
+        ),
         useMaterial3: true,
       ),
       routes: {
