@@ -46,7 +46,7 @@ class _TelaDoJogoState extends State<TelaDoJogo> {
             child: ListView.builder(
                 shrinkWrap: true,
                 scrollDirection: Axis.horizontal,
-                itemCount: 3,
+                itemCount: listaDeAtributos.length,
                 itemBuilder: (context, index) {
                   return Padding(
                     padding: const EdgeInsets.all(8.0),
