@@ -35,7 +35,7 @@ class _TelaDoJogoState extends State<TelaDoJogo> {
 
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        backgroundColor: Color(0xFF189AB4),
         title: const Center(child: Text('Jogo sobre POO')),
       ),
       body: Column(
