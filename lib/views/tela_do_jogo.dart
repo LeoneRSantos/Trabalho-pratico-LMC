@@ -15,6 +15,24 @@ class _TelaDoJogoState extends State<TelaDoJogo> {
   Widget build(BuildContext context) {
     int _indiceAtual = 0;
 
+    List<String> listaDeAtributos = [
+      'String _nome = \'nome\';',
+      'final String nome = \'nome\';',
+      'late String nome = \'nome\';'
+    ];
+
+    List<String> listaDeMetodos = [
+      'get getNome() => nome;',
+      'String getNome(){}',
+      'String getNome(nome) => nome'
+    ];
+
+    List<String> listaDeInstancias = [
+      'Pessoa() p = Pessoa();',
+      'new Pessoa() = pessoa;',
+      'pessoa = Pessoa();'
+    ];
+
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
