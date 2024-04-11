@@ -122,17 +122,39 @@ class _TelaDoJogoState extends State<TelaDoJogo> {
                   );
                 }),
           ),
-          Textos(texto: 'Escolha o main'),
+          Textos(texto: 'Escolha a instância'),
           Expanded(
             child: ListView.builder(
                 shrinkWrap: true,
                 scrollDirection: Axis.horizontal,
-                itemCount: 3,
+                itemCount: listaDeInstancias.length,
                 itemBuilder: (context, index) {
                   return Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Container(
-                      color: Colors.amber,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Textos(texto: '${listaDeInstancias[index]}'),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 8.0),
+                            child: ElevatedButton(
+                                  onPressed: () {
+                                    debugPrint('${listaDeAtributos[index]}');
+                                  },
+                                  child: const Text(
+                                    'Usar',
+                                    style: TextStyle(fontWeight: FontWeight.bold),
+                                  ),
+                                ),
+                          ),
+                          
+                        ],
+                      ),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20.0),
+                        color: Color(0xFFD4F1F4),
+                      ),
                       width: 200,
                     ),
                   );
