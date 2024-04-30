@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:jogo_sobre_poo/models/encapsulamento.dart';
 import 'package:jogo_sobre_poo/widgets/componente_textos.dart';
 import 'package:jogo_sobre_poo/widgets/lista_de_atributos.dart';
 
@@ -11,27 +12,11 @@ class TelaDoJogo extends StatefulWidget {
 }
 
 class _TelaDoJogoState extends State<TelaDoJogo> {
+  Encapsulamento e = Encapsulamento();
+
   @override
   Widget build(BuildContext context) {
     int _indiceAtual = 0;
-
-    List<String> listaDeAtributos = [
-      'String _nome = \'nome\';',
-      'final String nome = \'nome\';',
-      'late String nome = \'nome\';'
-    ];
-
-    List<String> listaDeMetodos = [
-      'get getNome() => nome;',
-      'String getNome(){}',
-      'String getNome(nome) => nome'
-    ];
-
-    List<String> listaDeInstancias = [
-      'Pessoa() p = Pessoa();',
-      'new Pessoa() = pessoa;',
-      'pessoa = Pessoa();'
-    ];
 
     return Scaffold(
       appBar: AppBar(
@@ -41,12 +26,12 @@ class _TelaDoJogoState extends State<TelaDoJogo> {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Textos(texto: 'Escolha os atributos'),
+          const Textos(texto: 'Escolha os atributos'),
           Expanded(
             child: ListView.builder(
                 shrinkWrap: true,
                 scrollDirection: Axis.horizontal,
-                itemCount: listaDeAtributos.length,
+                itemCount: e.retornarQuantidadeDeAtributos(),
                 itemBuilder: (context, index) {
                   return Padding(
                     padding: const EdgeInsets.all(8.0),
@@ -56,12 +41,12 @@ class _TelaDoJogoState extends State<TelaDoJogo> {
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Textos(texto: '${listaDeAtributos[index]}'),
+                            Textos(texto: '${e.retornarAtributos(index)}'),
                             Padding(
                               padding: const EdgeInsets.only(top: 8.0),
                               child: ElevatedButton(
                                 onPressed: () {
-                                  debugPrint('${listaDeAtributos[index]}');
+                                  debugPrint('${e.retornarAtributos(index)}');
                                 },
                                 child: const Text(
                                   'Usar',
@@ -87,7 +72,7 @@ class _TelaDoJogoState extends State<TelaDoJogo> {
             child: ListView.builder(
                 shrinkWrap: true,
                 scrollDirection: Axis.horizontal,
-                itemCount: listaDeMetodos.length,
+                itemCount: e.retornarQuantidadeDeMetodos(),
                 itemBuilder: (context, index) {
                   return Padding(
                     padding: const EdgeInsets.all(8.0),
@@ -97,10 +82,10 @@ class _TelaDoJogoState extends State<TelaDoJogo> {
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Textos(texto: '${listaDeMetodos[index]}'),
+                            Textos(texto: '${e.retornarMetodos(index)}'),
                             ElevatedButton(
                               onPressed: () {
-                                debugPrint('${listaDeAtributos[index]}');
+                                debugPrint('${e.retornarInstancias(index)}');
                               },
                               child: Padding(
                                 padding: const EdgeInsets.only(top: 8.0),
@@ -127,7 +112,7 @@ class _TelaDoJogoState extends State<TelaDoJogo> {
             child: ListView.builder(
                 shrinkWrap: true,
                 scrollDirection: Axis.horizontal,
-                itemCount: listaDeInstancias.length,
+                itemCount: e.retornarQuantidadeInstancias(),
                 itemBuilder: (context, index) {
                   return Padding(
                     padding: const EdgeInsets.all(8.0),
@@ -135,20 +120,19 @@ class _TelaDoJogoState extends State<TelaDoJogo> {
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Textos(texto: '${listaDeInstancias[index]}'),
+                          Textos(texto: '${e.retornarInstancias(index)}'),
                           Padding(
                             padding: const EdgeInsets.only(top: 8.0),
                             child: ElevatedButton(
-                                  onPressed: () {
-                                    debugPrint('${listaDeAtributos[index]}');
-                                  },
-                                  child: const Text(
-                                    'Usar',
-                                    style: TextStyle(fontWeight: FontWeight.bold),
-                                  ),
-                                ),
+                              onPressed: () {
+                                debugPrint('${e.retornarInstancias(index)}');
+                              },
+                              child: const Text(
+                                'Usar',
+                                style: TextStyle(fontWeight: FontWeight.bold),
+                              ),
+                            ),
                           ),
-                          
                         ],
                       ),
                       decoration: BoxDecoration(
