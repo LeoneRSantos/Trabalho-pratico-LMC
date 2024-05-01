@@ -1,4 +1,6 @@
-class ClassesMetodosEObjetos {
+import 'package:jogo_sobre_poo/models/tipo.dart';
+class ClassesMetodosEObjetos implements Tipo{
+
   final List<String> _listaDeAtributos = [
     'int final _nome = \'nome\';',
     'final String nome = \'nome\';',
@@ -16,6 +18,9 @@ class ClassesMetodosEObjetos {
     'new Pessoa() = pessoa;',
     'pessoa = Pessoa();'
   ];
+
+  @override
+  int retornarTipo() => 0;
 
   String retornarAtributos(int indice) {
     return _listaDeAtributos[indice];
