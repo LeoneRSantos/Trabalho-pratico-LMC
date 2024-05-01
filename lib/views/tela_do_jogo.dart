@@ -1,18 +1,41 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:jogo_sobre_poo/models/classes_metodos_e_objetos.dart';
 import 'package:jogo_sobre_poo/models/encapsulamento.dart';
+import 'package:jogo_sobre_poo/models/heranca.dart';
+import 'package:jogo_sobre_poo/models/polimorfismo.dart';
 import 'package:jogo_sobre_poo/widgets/componente_textos.dart';
 import 'package:jogo_sobre_poo/widgets/lista_de_atributos.dart';
 
 class TelaDoJogo extends StatefulWidget {
-  const TelaDoJogo({super.key});
-
+  const TelaDoJogo({super.key, required this.tipoDeFundamento});
+  final int tipoDeFundamento;
   @override
   State<TelaDoJogo> createState() => _TelaDoJogoState();
 }
 
 class _TelaDoJogoState extends State<TelaDoJogo> {
   Encapsulamento e = Encapsulamento();
+  ClassesMetodosEObjetos c = ClassesMetodosEObjetos();
+  Heranca h = Heranca();
+  Polimorfismo p = Polimorfismo();
+  Object o = Object();
+
+  Object verificarFundamento() {
+    if (widget.tipoDeFundamento == 0) {
+      o = c;
+      return o;
+    } else if (widget.tipoDeFundamento == 1) {
+      o = e;
+      return o;
+    } else if (widget.tipoDeFundamento == 2) {
+      o = h;
+      return o;
+    } else {
+      o = p;
+      return o;
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +43,7 @@ class _TelaDoJogoState extends State<TelaDoJogo> {
 
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(0xFF189AB4),
+        backgroundColor: const Color(0xFF189AB4),
         title: const Center(child: Text('Jogo sobre POO')),
       ),
       body: Column(
