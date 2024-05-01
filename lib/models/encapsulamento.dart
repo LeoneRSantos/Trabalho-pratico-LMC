@@ -1,4 +1,7 @@
-class Encapsulamento {
+import 'package:jogo_sobre_poo/models/tipo.dart';
+
+class Encapsulamento implements Tipo {
+
   final List<String> _listaDeAtributos = [
     'String _nome = \'nome\';',
     'final String nome = \'nome\';',
@@ -16,6 +19,9 @@ class Encapsulamento {
     'new Pessoa() = pessoa;',
     'pessoa = Pessoa();'
   ];
+
+  @override
+  int retornarTipo() => 1;
 
   String retornarAtributos(int indice) {
     return _listaDeAtributos[indice];
