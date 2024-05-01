@@ -30,7 +30,9 @@ class MyApp extends StatelessWidget {
       routes: {
         Rotas.home: (context) => const Home(),
         Rotas.fundamentoDePoo: (context) => const TelaDeFundamento(),
-        Rotas.telaDoJogo: (context) => const TelaDoJogo(),
+        Rotas.telaDoJogo: (context) => const TelaDoJogo(
+              tipoDeFundamento: 0,
+            ),
       },
     );
   }
