@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:jogo_sobre_poo/views/tela_do_jogo.dart';
 import '../routes/rotas.dart';
 
 class TelaDeFundamento extends StatefulWidget {
@@ -42,7 +43,13 @@ class _TelaDeFundamentoState extends State<TelaDeFundamento> {
                 child: ElevatedButton(
                   style: botoes,
                   onPressed: () {
-                    Navigator.of(context).pushNamed(Rotas.telaDoJogo);
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) =>
+                            const TelaDoJogo(tipoDeFundamento: 0),
+                      ),
+                    );
                   },
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
@@ -58,7 +65,13 @@ class _TelaDeFundamentoState extends State<TelaDeFundamento> {
                 child: ElevatedButton(
                   style: botoes,
                   onPressed: () {
-                    Navigator.of(context).pushNamed(Rotas.telaDoJogo);
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) =>
+                            const TelaDoJogo(tipoDeFundamento: 1),
+                      ),
+                    );
                   },
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
@@ -74,7 +87,13 @@ class _TelaDeFundamentoState extends State<TelaDeFundamento> {
                 child: ElevatedButton(
                   style: botoes,
                   onPressed: () {
-                    Navigator.of(context).pushNamed(Rotas.telaDoJogo);
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) =>
+                            const TelaDoJogo(tipoDeFundamento: 2),
+                      ),
+                    );
                   },
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
@@ -90,7 +109,13 @@ class _TelaDeFundamentoState extends State<TelaDeFundamento> {
                 child: ElevatedButton(
                   style: botoes,
                   onPressed: () {
-                    Navigator.of(context).pushNamed(Rotas.telaDoJogo);
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) =>
+                            const TelaDoJogo(tipoDeFundamento: 3),
+                      ),
+                    );
                   },
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
