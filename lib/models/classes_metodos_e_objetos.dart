@@ -1,6 +1,6 @@
-import 'package:jogo_sobre_poo/models/tipo.dart';
-class ClassesMetodosEObjetos implements Tipo{
+import 'package:jogo_sobre_poo/models/interface_jogo.dart';
 
+class ClassesMetodosEObjetos implements InterfaceJogo {
   final List<String> _listaDeAtributos = [
     'int final _nome = \'nome\';',
     'final String nome = \'nome\';',
@@ -20,28 +20,31 @@ class ClassesMetodosEObjetos implements Tipo{
   ];
 
   @override
-  int retornarTipo() => 0;
-
   String retornarAtributos(int indice) {
     return _listaDeAtributos[indice];
   }
 
+  @override
   int retornarQuantidadeDeAtributos() {
     return _listaDeAtributos.length;
   }
 
+  @override
   String retornarMetodos(int indice) {
     return _listaDeMetodos[indice];
   }
 
+  @override
   int retornarQuantidadeDeMetodos() {
     return _listaDeMetodos.length;
   }
 
+  @override
   String retornarInstancias(int indice) {
     return _listaDeInstancias[indice];
   }
 
+  @override
   int retornarQuantidadeInstancias() {
     return _listaDeInstancias.length;
   }
