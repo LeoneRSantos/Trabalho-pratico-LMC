@@ -1,6 +1,6 @@
-import 'package:jogo_sobre_poo/models/tipo.dart';
+import 'package:jogo_sobre_poo/models/interface_jogo.dart';
 
-class Polimorfismo implements Tipo {
+class Polimorfismo implements InterfaceJogo {
   final List<String> _listaDeClasses = [
     'class Carro extends Veiculo{ }',
     'class Carro implements Veiculo{ }',
@@ -20,28 +20,31 @@ class Polimorfismo implements Tipo {
   ];
 
   @override
-  int retornarTipo() => 3;
-
   String retornarAtributos(int indice) {
     return _listaDeClasses[indice];
   }
 
+  @override
   int retornarQuantidadeDeAtributos() {
     return _listaDeClasses.length;
   }
 
+  @override
   String retornarMetodos(int indice) {
     return _listaDeMetodos[indice];
   }
 
+  @override
   int retornarQuantidadeDeMetodos() {
     return _listaDeMetodos.length;
   }
 
+  @override
   String retornarInstancias(int indice) {
     return _listaDeInstancias[indice];
   }
 
+  @override
   int retornarQuantidadeInstancias() {
     return _listaDeInstancias.length;
   }
