@@ -1,6 +1,6 @@
-import 'package:jogo_sobre_poo/models/tipo.dart';
+import 'package:jogo_sobre_poo/models/interface_jogo.dart';
 
-class Heranca implements Tipo {
+class Heranca implements InterfaceJogo {
   final List<String> _listaDeClasses = [
     'class Cachorro extends AnimalDeEstimacaao{ }',
     'class Cachorro implements AnimalDeEstimacao{ }',
@@ -20,28 +20,31 @@ class Heranca implements Tipo {
   ];
 
   @override
-  int retornarTipo() => 2;
-
   String retornarAtributos(int indice) {
     return _listaDeClasses[indice];
   }
 
+  @override
   int retornarQuantidadeDeAtributos() {
     return _listaDeClasses.length;
   }
 
+  @override
   String retornarMetodos(int indice) {
     return _listaDeMetodos[indice];
   }
 
+  @override
   int retornarQuantidadeDeMetodos() {
     return _listaDeMetodos.length;
   }
 
+  @override
   String retornarInstancias(int indice) {
     return _listaDeInstancias[indice];
   }
 
+  @override
   int retornarQuantidadeInstancias() {
     return _listaDeInstancias.length;
   }
