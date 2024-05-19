@@ -51,7 +51,7 @@ class _TelaDoJogoState extends State<TelaDoJogo> {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Textos(texto: 'Escolha os atributos'),
+          Textos(texto: widget.atributos[0] == 'class Carro extends Veiculo{ }'? 'Escolha a classe': 'Escolha os atributos'),
           Expanded(
             child: ListView.builder(
                 shrinkWrap: true,
