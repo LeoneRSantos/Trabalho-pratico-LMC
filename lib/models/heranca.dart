@@ -20,8 +20,8 @@ class Heranca implements InterfaceJogo {
   ];
 
   @override
-  String retornarAtributos(int indice) {
-    return _listaDeClasses[indice];
+  List<String> retornarAtributos() {
+    return _listaDeClasses;
   }
 
   @override
@@ -30,8 +30,8 @@ class Heranca implements InterfaceJogo {
   }
 
   @override
-  String retornarMetodos(int indice) {
-    return _listaDeMetodos[indice];
+  List<String> retornarMetodos() {
+    return _listaDeMetodos;
   }
 
   @override
@@ -40,8 +40,8 @@ class Heranca implements InterfaceJogo {
   }
 
   @override
-  String retornarInstancias(int indice) {
-    return _listaDeInstancias[indice];
+  List<String> retornarInstancias() {
+    return _listaDeInstancias;
   }
 
   @override
