@@ -1,22 +1,22 @@
 abstract class InterfaceJogo {
-  String retornarAtributos(int indice) {
-    return '';
+  List<String> retornarAtributos() {
+    return [];
   }
 
   int retornarQuantidadeDeAtributos() {
     return 0;
   }
 
-  String retornarMetodos(int indice) {
-    return '';
+  List<String> retornarMetodos() {
+    return [];
   }
 
   int retornarQuantidadeDeMetodos() {
     return 0;
   }
 
-  String retornarInstancias(int indice) {
-    return '';
+  List<String> retornarInstancias() {
+    return [];
   }
 
   int retornarQuantidadeInstancias() {
