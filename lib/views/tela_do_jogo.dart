@@ -8,8 +8,10 @@ import 'package:jogo_sobre_poo/widgets/componente_textos.dart';
 import 'package:jogo_sobre_poo/widgets/lista_de_atributos.dart';
 
 class TelaDoJogo extends StatefulWidget {
-  const TelaDoJogo({super.key, required this.tipoDeFundamento});
-  final int tipoDeFundamento;
+  const TelaDoJogo({super.key, required this.atributos, required this.metodos, required this.instancia});
+  final List<String> atributos;
+  final List<String> metodos;
+  final List<String> instancia;
   @override
   State<TelaDoJogo> createState() => _TelaDoJogoState();
 }
