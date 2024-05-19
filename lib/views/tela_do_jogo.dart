@@ -1,11 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:jogo_sobre_poo/models/classes_metodos_e_objetos.dart';
-import 'package:jogo_sobre_poo/models/encapsulamento.dart';
-import 'package:jogo_sobre_poo/models/heranca.dart';
-import 'package:jogo_sobre_poo/models/polimorfismo.dart';
 import 'package:jogo_sobre_poo/widgets/componente_textos.dart';
-import 'package:jogo_sobre_poo/widgets/lista_de_atributos.dart';
 
 class TelaDoJogo extends StatefulWidget {
   const TelaDoJogo({super.key, required this.atributos, required this.metodos, required this.instancia});
@@ -17,27 +11,6 @@ class TelaDoJogo extends StatefulWidget {
 }
 
 class _TelaDoJogoState extends State<TelaDoJogo> {
-  Encapsulamento e = Encapsulamento();
-  ClassesMetodosEObjetos c = ClassesMetodosEObjetos();
-  Heranca h = Heranca();
-  Polimorfismo p = Polimorfismo();
-  Object o = Object();
-
-  Object verificarFundamento() {
-    if (widget.tipoDeFundamento == 0) {
-      o = c;
-      return o;
-    } else if (widget.tipoDeFundamento == 1) {
-      o = e;
-      return o;
-    } else if (widget.tipoDeFundamento == 2) {
-      o = h;
-      return o;
-    } else {
-      o = p;
-      return o;
-    }
-  }
 
   @override
   Widget build(BuildContext context) {
