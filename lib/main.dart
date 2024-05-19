@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:jogo_sobre_poo/routes/rotas.dart';
 import 'package:jogo_sobre_poo/views/home.dart';
 import 'package:jogo_sobre_poo/views/tela_de_poo.dart';
-import 'package:jogo_sobre_poo/views/tela_do_codigo.dart';
 import 'package:jogo_sobre_poo/views/tela_do_jogo.dart';
 
 void main() {
@@ -30,8 +29,7 @@ class MyApp extends StatelessWidget {
       routes: {
         Rotas.home: (context) => const Home(),
         Rotas.fundamentoDePoo: (context) => const TelaDeFundamento(),
-        Rotas.telaDoJogo: (context) => const TelaDoJogo(
-              tipoDeFundamento: 0,
+        Rotas.telaDoJogo: (context) => const TelaDoJogo(atributos: [], metodos: [], instancia: [],
             ),
       },
     );
