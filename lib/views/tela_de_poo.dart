@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:jogo_sobre_poo/models/classes_metodos_e_objetos.dart';
+import 'package:jogo_sobre_poo/models/encapsulamento.dart';
+import 'package:jogo_sobre_poo/models/heranca.dart';
+import 'package:jogo_sobre_poo/models/polimorfismo.dart';
 import 'package:jogo_sobre_poo/views/tela_do_jogo.dart';
-import '../routes/rotas.dart';
 
 class TelaDeFundamento extends StatefulWidget {
   const TelaDeFundamento({super.key});
@@ -15,6 +18,11 @@ class _TelaDeFundamentoState extends State<TelaDeFundamento> {
 
   ButtonStyle botoes =
       const ButtonStyle(elevation: MaterialStatePropertyAll(0.8));
+
+  ClassesMetodosEObjetos c = ClassesMetodosEObjetos();
+  Encapsulamento e = Encapsulamento();
+  Heranca h = Heranca();
+  Polimorfismo p = Polimorfismo();
 
   @override
   Widget build(BuildContext context) {
@@ -47,9 +55,9 @@ class _TelaDeFundamentoState extends State<TelaDeFundamento> {
                       context,
                       MaterialPageRoute(
                         builder: (context) =>
-                            const TelaDoJogo(tipoDeFundamento: 0),
+                            TelaDoJogo(atributos: c.retornarAtributos(), metodos: c.retornarMetodos(), instancia: c.retornarInstancias(),
                       ),
-                    );
+                    ));
                   },
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
@@ -69,7 +77,7 @@ class _TelaDeFundamentoState extends State<TelaDeFundamento> {
                       context,
                       MaterialPageRoute(
                         builder: (context) =>
-                            const TelaDoJogo(tipoDeFundamento: 1),
+                            TelaDoJogo(atributos: e.retornarAtributos(), metodos: e.retornarMetodos(), instancia: e.retornarInstancias(),),
                       ),
                     );
                   },
@@ -91,7 +99,7 @@ class _TelaDeFundamentoState extends State<TelaDeFundamento> {
                       context,
                       MaterialPageRoute(
                         builder: (context) =>
-                            const TelaDoJogo(tipoDeFundamento: 2),
+                            TelaDoJogo(atributos: h.retornarAtributos(), metodos: h.retornarMetodos(), instancia: h.retornarInstancias(),),
                       ),
                     );
                   },
@@ -113,7 +121,7 @@ class _TelaDeFundamentoState extends State<TelaDeFundamento> {
                       context,
                       MaterialPageRoute(
                         builder: (context) =>
-                            const TelaDoJogo(tipoDeFundamento: 3),
+                            TelaDoJogo(atributos: p.retornarAtributos(), metodos: p.retornarMetodos(), instancia: p.retornarInstancias(),),
                       ),
                     );
                   },
