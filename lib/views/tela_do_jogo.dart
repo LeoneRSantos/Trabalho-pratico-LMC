@@ -66,12 +66,12 @@ class _TelaDoJogoState extends State<TelaDoJogo> {
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Textos(texto: '${e.retornarAtributos(index)}'),
+                            Textos(texto: '${widget.atributos[index]}'),
                             Padding(
                               padding: const EdgeInsets.only(top: 8.0),
                               child: ElevatedButton(
                                 onPressed: () {
-                                  debugPrint('${e.retornarAtributos(index)}');
+                                  debugPrint('${widget.atributos[index]}');
                                 },
                                 child: const Text(
                                   'Usar',
@@ -107,10 +107,10 @@ class _TelaDoJogoState extends State<TelaDoJogo> {
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Textos(texto: '${e.retornarMetodos(index)}'),
+                            Textos(texto: '${widget.metodos[index]}'),
                             ElevatedButton(
                               onPressed: () {
-                                debugPrint('${e.retornarInstancias(index)}');
+                                debugPrint('${widget.metodos[index]}');
                               },
                               child: Padding(
                                 padding: const EdgeInsets.only(top: 8.0),
@@ -145,12 +145,12 @@ class _TelaDoJogoState extends State<TelaDoJogo> {
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Textos(texto: '${e.retornarInstancias(index)}'),
+                          Textos(texto: '${widget.instancia[index]}'),
                           Padding(
                             padding: const EdgeInsets.only(top: 8.0),
                             child: ElevatedButton(
                               onPressed: () {
-                                debugPrint('${e.retornarInstancias(index)}');
+                                debugPrint('${widget.instancia[index]}');
                               },
                               child: const Text(
                                 'Usar',
