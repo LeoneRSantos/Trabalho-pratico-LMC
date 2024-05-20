@@ -75,11 +75,14 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-    - family: Aileron
+    # - family: Aileron
+    #   fonts:
+    #     # - asset: assets/fonts/aileron/
+    #     - asset: lib/assets/fonts/aileron/Aileron-Regular.otf
+
+    - family: DMSans
       fonts:
-        # - asset: assets/fonts/aileron/
-        - asset: lib/assets/fonts/aileron/Aileron-Regular.otf
-  #       - asset: fonts/Schyler-Italic.ttf
+      - asset: lib/assets/fonts/DMSans-Regular.ttf
   #         style: italic
   #   - family: Trajan Pro
   #     fonts:
