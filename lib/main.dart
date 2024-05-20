@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
         appBarTheme: AppBarTheme(
           foregroundColor: Colors.grey.shade100,
         ),
-        fontFamily: 'Aileron',
+        fontFamily: 'DMSans',
         colorScheme: ColorScheme.fromSeed(
           seedColor: const Color(0xFF05445E),
         ),
