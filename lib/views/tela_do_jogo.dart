@@ -29,7 +29,7 @@ class _TelaDoJogoState extends State<TelaDoJogo> {
             child: ListView.builder(
                 shrinkWrap: true,
                 scrollDirection: Axis.horizontal,
-                itemCount: 3,
+                itemCount: widget.atributos.length,
                 itemBuilder: (context, index) {
                   return Padding(
                     padding: const EdgeInsets.all(8.0),
@@ -70,7 +70,7 @@ class _TelaDoJogoState extends State<TelaDoJogo> {
             child: ListView.builder(
                 shrinkWrap: true,
                 scrollDirection: Axis.horizontal,
-                itemCount: 3,
+                itemCount: widget.metodos.length,
                 itemBuilder: (context, index) {
                   return Padding(
                     padding: const EdgeInsets.all(8.0),
@@ -110,7 +110,7 @@ class _TelaDoJogoState extends State<TelaDoJogo> {
             child: ListView.builder(
                 shrinkWrap: true,
                 scrollDirection: Axis.horizontal,
-                itemCount: 3,
+                itemCount: widget.instancia.length,
                 itemBuilder: (context, index) {
                   return Padding(
                     padding: const EdgeInsets.all(8.0),
@@ -142,17 +142,6 @@ class _TelaDoJogoState extends State<TelaDoJogo> {
                   );
                 }),
           ),
-        ],
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: _indiceAtual,
-        onTap: (int valor) {
-          _indiceAtual = valor;
-        },
-        items: const [
-          BottomNavigationBarItem(
-              icon: Icon(Icons.games_rounded), label: 'Jogo'),
-          BottomNavigationBarItem(icon: Icon(Icons.code), label: 'Código'),
         ],
       ),
     );
