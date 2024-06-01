@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:jogo_sobre_poo/provider/codigo_provider.dart';
 import 'package:jogo_sobre_poo/widgets/componente_textos.dart';
+import 'package:provider/provider.dart';
 
 class TelaDoCodigo extends StatefulWidget {
   const TelaDoCodigo({super.key});
@@ -9,8 +11,12 @@ class TelaDoCodigo extends StatefulWidget {
 }
 
 class _TelaDoCodigoState extends State<TelaDoCodigo> {
+
   @override
   Widget build(BuildContext context) {
+
+  final CodigoProvider codigos = Provider.of(context);
+
     return Scaffold(
       appBar: AppBar(
         backgroundColor: const Color(0xFF189AB4),
@@ -26,9 +32,9 @@ class _TelaDoCodigoState extends State<TelaDoCodigo> {
             children: [
               Textos(
                   texto:
-                      'Class Pessoa { \n\n final String nome; \n get getNome () => nome; \n\n } \n\n'),
+                      'Class Pessoa { \n\n ${codigos.code.getLista(0)} \n ${codigos.code.getLista(1)} \n\n } \n\n'),
               Textos(
-                  texto: 'void main() { \n\n Pessoa p = Pessoa(); \n\n } \n\n'),
+                  texto: 'void main() { \n\n ${codigos.code.getLista(2)} \n\n } \n\n'),
               ElevatedButton(
                 onPressed: () {
                   debugPrint('Finalizar');
