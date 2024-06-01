@@ -39,6 +39,18 @@ class _AuxiliarState extends State<Auxiliar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar( 
+        backgroundColor: Colors.black,
+        leading: IconButton(onPressed: (){ 
+         Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) =>
+                            TelaDoCodigo(),
+                      ),
+                    );
+        }, icon: Icon(Icons.add),),
+      ),
       body: PageView(
         children: [
           TelaDoJogo(
