@@ -14,9 +14,9 @@ class Polimorfismo implements InterfaceJogo {
   ];
 
   final List<String> _listaDeInstancias = [
-    'Cachorro() dog = Animal();',
-    'new Animal() = cachorro;',
-    'Cachorro = Cachorro();'
+    'Carro() c = Veiculo();',
+    'Veiculo() c = Carro();',
+    'Carro c = Carro();'
   ];
 
   @override
