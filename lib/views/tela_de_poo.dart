@@ -4,7 +4,6 @@ import 'package:jogo_sobre_poo/models/encapsulamento.dart';
 import 'package:jogo_sobre_poo/models/heranca.dart';
 import 'package:jogo_sobre_poo/models/polimorfismo.dart';
 import 'package:jogo_sobre_poo/views/auxiliar.dart';
-import 'package:jogo_sobre_poo/views/tela_do_jogo.dart';
 
 class TelaDeFundamento extends StatefulWidget {
   const TelaDeFundamento({super.key});
