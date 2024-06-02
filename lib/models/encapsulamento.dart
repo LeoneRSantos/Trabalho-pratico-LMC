@@ -8,7 +8,7 @@ class Encapsulamento implements InterfaceJogo {
   ];
 
   final List<String> _listaDeMetodos = [
-    'get getNome() => nome;',
+    'get getNome() => _nome;',
     'String getNome(){}',
     'String getNome(nome) => nome'
   ];
