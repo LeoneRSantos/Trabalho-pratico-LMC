@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:jogo_sobre_poo/models/classes_metodos_e_objetos.dart';
-import 'package:jogo_sobre_poo/views/home.dart';
-import 'package:jogo_sobre_poo/views/tela_de_poo.dart';
 import 'package:jogo_sobre_poo/views/tela_do_codigo.dart';
 import 'package:jogo_sobre_poo/views/tela_do_jogo.dart';
 
@@ -39,18 +36,6 @@ class _AuxiliarState extends State<Auxiliar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar( 
-        backgroundColor: Colors.black,
-        leading: IconButton(onPressed: (){ 
-         Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) =>
-                            TelaDoCodigo(),
-                      ),
-                    );
-        }, icon: Icon(Icons.add),),
-      ),
       body: PageView(
         children: [
           TelaDoJogo(
@@ -61,20 +46,20 @@ class _AuxiliarState extends State<Auxiliar> {
         ],
         onPageChanged: setPagina,
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: paginaAtual,
-        onTap: (valor) {
-          setState(() {
-            pc.animateToPage(valor,
-                duration: Duration(milliseconds: 400), curve: Curves.ease);
-          });
-        },
-        items: const [
-          BottomNavigationBarItem(
-              icon: Icon(Icons.games_rounded), label: 'Jogo'),
-          BottomNavigationBarItem(icon: Icon(Icons.code), label: 'Código'),
-        ],
-      ),
+      // bottomNavigationBar: BottomNavigationBar(
+      //   currentIndex: paginaAtual,
+      //   onTap: (valor) {
+      //     setState(() {
+      //       pc.animateToPage(valor,
+      //           duration: Duration(milliseconds: 400), curve: Curves.ease);
+      //     });
+      //   },
+      //   items: const [
+      //     BottomNavigationBarItem(
+      //         icon: Icon(Icons.games_rounded), label: 'Jogo'),
+      //     BottomNavigationBarItem(icon: Icon(Icons.code), label: 'Código'),
+      //   ],
+      // ),
     );
   }
 }
