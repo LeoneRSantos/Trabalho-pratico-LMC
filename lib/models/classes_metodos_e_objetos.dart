@@ -9,7 +9,7 @@ class ClassesMetodosEObjetos implements InterfaceJogo {
 
   final List<String> _listaDeMetodos = [
     'int falar() => \'Oi, olá!\';',
-    'String falar(){}',
+    'String falar(){return \'Oi, olá!\'}',
     'String falar(2345) => 2345'
   ];
 
