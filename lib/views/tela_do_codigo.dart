@@ -62,7 +62,7 @@ class _TelaDoCodigoState extends State<TelaDoCodigo> {
                   }
 
                   // Encapsulamento
-                  if (codigos.code.getLista()[0] ==
+                  else if (codigos.code.getLista()[0] ==
                           'String _nome = \'nome\';' &&
                       codigos.code.getLista()[1] == 'get getNome() => _nome;' &&
                       codigos.code.getLista()[2] == 'Pessoa() p = Pessoa();') {
@@ -84,7 +84,7 @@ class _TelaDoCodigoState extends State<TelaDoCodigo> {
                   }
 
                   // Herança
-                  if (codigos.code.getLista()[0] ==
+                  else if (codigos.code.getLista()[0] ==
                           'class Cachorro extends AnimalDeEstimacaao{ }' &&
                       codigos.code.getLista()[1] ==
                           '@override\n String latir() => \'O cachorro está latindo.\';' &&
@@ -108,7 +108,7 @@ class _TelaDoCodigoState extends State<TelaDoCodigo> {
                   }
 
                   // Polimorfismo
-                  if (codigos.code.getLista()[0] ==
+                  else if (codigos.code.getLista()[0] ==
                           'class Carro extends Veiculo{ }' &&
                       codigos.code.getLista()[1] ==
                           '@override\n String seLocomover => \'O carro está na estrada.\';' &&
