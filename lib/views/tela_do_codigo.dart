@@ -15,6 +15,18 @@ class _TelaDoCodigoState extends State<TelaDoCodigo> {
   Widget build(BuildContext context) {
     final CodigoProvider codigos = Provider.of(context);
 
+    String definirTexto() {
+      if (codigos.code.getLista()[0] ==
+          'class Cachorro extends AnimalDeEstimacaao{ }') {
+        return 'class Cachorro extends AnimalDeEstimacaao{ }';
+      } else if (codigos.code.getLista()[0] ==
+          'class Carro extends Veiculo{ }') {
+        return 'class Carro extends Veiculo{ }';
+      }
+
+      return 'class Pessoa { \n\n ${codigos.code.getLista()[0]} \n ${codigos.code.getLista()[1]} \n\n } \n\n';
+    }
+
     return Scaffold(
       appBar: AppBar(
         backgroundColor: const Color(0xFF189AB4),
