@@ -59,8 +59,10 @@ class _TelaDoCodigoState extends State<TelaDoCodigo> {
                     showDialog(
                         context: context,
                         builder: (context) => AlertDialog(
-                                content: Text(
-                                    'Parabéns! Você ganhou, os trechos de código escolhidos estão de acordo com os princípios da POO.'),
+                                content: Textos(
+                                  texto:
+                                      'Parabéns! Você ganhou, os trechos de código escolhidos estão de acordo com os princípios da POO.',
+                                ),
                                 actions: [
                                   ElevatedButton(
                                     style: ElevatedButton.styleFrom(
@@ -81,8 +83,9 @@ class _TelaDoCodigoState extends State<TelaDoCodigo> {
                     showDialog(
                         context: context,
                         builder: (context) => AlertDialog(
-                                content: Text(
-                                    'Parabéns! Você ganhou, os trechos de código escolhidos estão de acordo com os princípios da POO.'),
+                                content: Textos(
+                                    texto:
+                                        'Parabéns! Você ganhou, os trechos de código escolhidos estão de acordo com os princípios da POO.'),
                                 actions: [
                                   ElevatedButton(
                                     style: ElevatedButton.styleFrom(
@@ -96,7 +99,8 @@ class _TelaDoCodigoState extends State<TelaDoCodigo> {
                   }
 
                   // Herança
-                  else if (codigos.code.getLista()[0] ==
+                  else if (codigos.code
+                              .getLista()[0] ==
                           'class Cachorro extends AnimalDeEstimacaao{ }' &&
                       codigos.code.getLista()[1] ==
                           '@override\n String latir() => \'O cachorro está latindo.\';' &&
@@ -105,8 +109,9 @@ class _TelaDoCodigoState extends State<TelaDoCodigo> {
                     showDialog(
                         context: context,
                         builder: (context) => AlertDialog(
-                                content: Text(
-                                    'Parabéns! Você ganhou, os trechos de código escolhidos estão de acordo com os princípios da POO.'),
+                                content: Textos(
+                                    texto:
+                                        'Parabéns! Você ganhou, os trechos de código escolhidos estão de acordo com os princípios da POO.'),
                                 actions: [
                                   ElevatedButton(
                                     style: ElevatedButton.styleFrom(
@@ -128,8 +133,9 @@ class _TelaDoCodigoState extends State<TelaDoCodigo> {
                     showDialog(
                         context: context,
                         builder: (context) => AlertDialog(
-                                content: Text(
-                                    'Parabéns! Você ganhou, os trechos de código escolhidos estão de acordo com os princípios da POO.'),
+                                content: Textos(
+                                    texto:
+                                        'Parabéns! Você ganhou, os trechos de código escolhidos estão de acordo com os princípios da POO.'),
                                 actions: [
                                   ElevatedButton(
                                     style: ElevatedButton.styleFrom(
@@ -144,8 +150,9 @@ class _TelaDoCodigoState extends State<TelaDoCodigo> {
                     showDialog(
                         context: context,
                         builder: (context) => AlertDialog(
-                                content: Text(
-                                    'Infelizmente você perdeu, seu código não está de acordo com os princípios da POO.'),
+                                content: Textos(
+                                    texto:
+                                        'Infelizmente você perdeu, seu código não está de acordo com os princípios da POO.'),
                                 actions: [
                                   ElevatedButton(
                                     style: ElevatedButton.styleFrom(
