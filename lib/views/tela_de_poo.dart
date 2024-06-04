@@ -29,7 +29,7 @@ class _TelaDeFundamentoState extends State<TelaDeFundamento> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Color(0xFF189AB4),
-        title: const Center(child: Text('Jogo sobre POO')),
+        title: const Center(child: Text('AprendiDart')),
       ),
       body: Center(
         child: Padding(
