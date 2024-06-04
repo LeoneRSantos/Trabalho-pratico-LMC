@@ -41,11 +41,11 @@ class _TelaDoCodigoState extends State<TelaDoCodigo> {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               Textos(
-                  texto:
-                      'Class Pessoa { \n\n ${codigos.code.getLista()[0]} \n ${codigos.code.getLista()[1]} \n\n } \n\n'),
+                texto: definirTexto(),
+              ),
               Textos(
                   texto:
-                      'void main() { \n\n ${codigos.code.getLista()[2]} \n\n } \n\n'),
+                      '\n\nvoid main() { \n\n ${codigos.code.getLista()[2]} \n\n } \n\n'),
               ElevatedButton(
                 onPressed: () {
                   debugPrint('Finalizar');
