@@ -5,7 +5,11 @@ import 'package:jogo_sobre_poo/widgets/componente_textos.dart';
 import 'package:provider/provider.dart';
 
 class TelaDoJogo extends StatefulWidget {
-  const TelaDoJogo({super.key, required this.atributos, required this.metodos, required this.instancia});
+  const TelaDoJogo(
+      {super.key,
+      required this.atributos,
+      required this.metodos,
+      required this.instancia});
   final List<String> atributos;
   final List<String> metodos;
   final List<String> instancia;
@@ -14,32 +18,43 @@ class TelaDoJogo extends StatefulWidget {
 }
 
 class _TelaDoJogoState extends State<TelaDoJogo> {
-
   @override
   Widget build(BuildContext context) {
-    int _indiceAtual = 0;
+    String usar = 'Usar';
 
     return Scaffold(
       appBar: AppBar(
         backgroundColor: const Color(0xFF189AB4),
-        title: const Center(child: Text('Jogo sobre POO')),
-        actions: [IconButton(onPressed: (){ 
-         Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) =>
-                            TelaDoCodigo(),
-                      ),
-                    );
-        }, icon: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Icon(Icons.code, size: 28.0,),
-        ), ),],
+        title: const Center(child: Text('AprendiDart')),
+        actions: [
+          IconButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => TelaDoCodigo(),
+                ),
+              );
+            },
+            icon: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Icon(
+                Icons.code,
+                size: 28.0,
+              ),
+            ),
+          ),
+        ],
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Textos(texto: widget.atributos[0] == 'class Carro extends Veiculo{ }'? 'Escolha a classe': 'Escolha os atributos'),
+          Textos(
+              texto: widget.atributos[0] == 'class Carro extends Veiculo{ }' ||
+                      widget.atributos[0] ==
+                          'class Cachorro extends AnimalDeEstimacaao{ }'
+                  ? 'Escolha a classe'
+                  : 'Escolha os atributos'),
           Expanded(
             child: ListView.builder(
                 shrinkWrap: true,
@@ -59,11 +74,15 @@ class _TelaDoJogoState extends State<TelaDoJogo> {
                               padding: const EdgeInsets.only(top: 8.0),
                               child: ElevatedButton(
                                 onPressed: () {
-                                   Provider.of<CodigoProvider>(context, listen: false).adicionarCodigoAtributo(widget.atributos[index]);
-                                  debugPrint('${widget.atributos[index]}');
+                                  Provider.of<CodigoProvider>(context,
+                                          listen: false)
+                                      .adicionarCodigoAtributo(
+                                          widget.atributos[index]);
+                                  debugPrint(
+                                      '${widget.atributos[index]}, alterar');
                                 },
-                                child: const Text(
-                                  'Usar',
+                                child: Text(
+                                  usar,
                                   style: TextStyle(fontWeight: FontWeight.bold),
                                 ),
                               ),
@@ -81,7 +100,7 @@ class _TelaDoJogoState extends State<TelaDoJogo> {
                   );
                 }),
           ),
-          Textos(texto: 'Escolha os métodos'),
+          Textos(texto: 'Escolha os métodos\t\t'),
           Expanded(
             child: ListView.builder(
                 shrinkWrap: true,
@@ -99,7 +118,10 @@ class _TelaDoJogoState extends State<TelaDoJogo> {
                             Textos(texto: '${widget.metodos[index]}'),
                             ElevatedButton(
                               onPressed: () {
-                                Provider.of<CodigoProvider>(context, listen: false).adicionarCodigoMetodo(widget.metodos[index]);
+                                Provider.of<CodigoProvider>(context,
+                                        listen: false)
+                                    .adicionarCodigoMetodo(
+                                        widget.metodos[index]);
                                 debugPrint('${widget.metodos[index]}');
                               },
                               child: Padding(
@@ -140,7 +162,10 @@ class _TelaDoJogoState extends State<TelaDoJogo> {
                             padding: const EdgeInsets.only(top: 8.0),
                             child: ElevatedButton(
                               onPressed: () {
-                                Provider.of<CodigoProvider>(context, listen: false).adicionarCodigoInstancia(widget.instancia[index]);
+                                Provider.of<CodigoProvider>(context,
+                                        listen: false)
+                                    .adicionarCodigoInstancia(
+                                        widget.instancia[index]);
                                 debugPrint('${widget.instancia[index]}');
                               },
                               child: const Text(
